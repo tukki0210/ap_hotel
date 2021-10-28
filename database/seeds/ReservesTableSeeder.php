@@ -18,5 +18,13 @@ class ReservesTableSeeder extends Seeder
             'check_out_day' => '2021-10-25'
         ];
         DB::table('reserves')->insert($param);
+
+        $param = [
+            'user_id' => 2,
+            'number_of_reservations' => 2,
+            'check_in_day' => '2021-10-24',
+            'check_out_day' => '2021-10-26'
+        ];
+        DB::table('reserves')->insert($param);
     }
 }

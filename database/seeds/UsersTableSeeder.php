@@ -17,5 +17,12 @@ class UsersTableSeeder extends Seeder
             'tel' => '0742-12-3456'
         ];
         DB::table('users')->insert($param);
+
+        $param = [
+            'name' => 'jiro',
+            'address' => '奈良県奈良市',
+            'tel' => '0742-12-3456'
+        ];
+        DB::table('users')->insert($param);
     }
 }
