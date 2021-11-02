@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>石見ホテル</title>
+    <title>APホテル</title>
     <style>
         body {
             margin:10px;
@@ -27,7 +27,7 @@
 </head>
 <body>
     <header>
-        <h1>石見ホテルへようこそ！</h1>
+        <h1>APホテル</h1>
         <nav>
             <ul class="main-nav">
                 <li><a href="./user">利用者一覧</a></li>
