@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/user','UserController@index');
+
+Route::get('/reserve','ReserveController@index');
+
