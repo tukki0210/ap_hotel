@@ -13,14 +13,14 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'name' => 'taro',
+            'name' => '大阪たろう',
             'address' => '大阪府大阪市',
             'tel' => '12-3456-7890'
         ];
         DB::table('users')->insert($param);
 
         $param = [
-            'name' => 'jiro',
+            'name' => '京都はなこ',
             'address' => '京都府京都市',
             'tel' => '12-3456-7890'
         ];
