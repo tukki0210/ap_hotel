@@ -1,0 +1,50 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class RoomsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $param = [
+            'room_type_id' => '1',
+            'room_number' => '101',
+        ];
+        DB::table('rooms')->insert($param);
+
+        $param = [
+            'room_type_id' => '1',
+            'room_number' => '102',
+        ];
+        DB::table('rooms')->insert($param);
+
+        $param = [
+            'room_type_id' => '1',
+            'room_number' => '103',
+        ];
+        DB::table('rooms')->insert($param);
+
+        $param = [
+            'room_type_id' => '2',
+            'room_number' => '104',
+        ];
+        DB::table('rooms')->insert($param);
+
+        $param = [
+            'room_type_id' => '2',
+            'room_number' => '105',
+        ];
+        DB::table('rooms')->insert($param);
+
+        $param = [
+            'room_type_id' => '2',
+            'room_number' => '106',
+        ];
+        DB::table('rooms')->insert($param);
+    }
+}

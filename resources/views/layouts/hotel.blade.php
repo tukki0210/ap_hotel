@@ -27,6 +27,19 @@
         .main-nav li {
             margin-left: 36px;
         }
+
+        table{
+            width: 80%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        table th, table td{
+            padding: 5px 0;
+            text-align: center;
+        }
+        table tr:nth-child(odd){
+            background-color: #eee;
+        }
     </style>
 </head>
 <body>
@@ -36,6 +49,8 @@
             <ul class="main-nav">
                 <li><a href="/user">利用者一覧</a></li>
                 <li><a href="/reserve">予約一覧</a></li>
+                <li><a href="/roomtype">部屋種一覧</a></li>
+                <li><a href="/room">部屋一覧</a></li>
             </ul>
             <ul class="main-nav">
                 <li><a href="/user/add">利用者追加</a></li>

@@ -14,11 +14,11 @@ class CreateReserveRoomTable extends Migration
     public function up()
     {
         Schema::create('reserve_room', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('reserve_room_id');
             $table->integer('reserve_id');
             $table->integer('room_id');
             $table->integer('days');
-            $table->string('price');
+            $table->integer('price');
             $table->timestamps();
         });
     }
