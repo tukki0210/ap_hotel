@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
+
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -12,18 +13,16 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        $faker = \Faker\Factory::create('ja_JP');
+        for ($i = 0; $i < 10; $i++){
         $param = [
-            'name' => '大阪たろう',
-            'address' => '大阪府大阪市',
-            'tel' => '12-3456-7890'
+            'name' => $faker->name(),
+            'address' => $faker->address(),
+            'tel' => $faker->phoneNumber(),
+            'created_at' => now(),
+            'update_at' => now(),
         ];
         DB::table('users')->insert($param);
-
-        $param = [
-            'name' => '京都はなこ',
-            'address' => '京都府京都市',
-            'tel' => '12-3456-7890'
-        ];
-        DB::table('users')->insert($param);
+        }
     }
 }
