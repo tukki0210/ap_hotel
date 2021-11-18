@@ -15,7 +15,7 @@ class Reserve extends Model
 
     public function room()
     {
-        return $this->belongsToMany('App\room','reserve_room','reserve_id','room_id')
+        return $this->belongsToMany('App\Room','reserve_room','reserve_id','room_id')
                     ->withPivot('days','price');
     }
 
