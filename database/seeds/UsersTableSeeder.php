@@ -17,10 +17,10 @@ class UsersTableSeeder extends Seeder
         for ($i = 0; $i < 10; $i++){
         $param = [
             'name' => $faker->name(),
-            'address' => $faker->address(),
+            'address' => substr($faker->address(),7),
             'tel' => $faker->phoneNumber(),
             'created_at' => now(),
-            'update_at' => now(),
+            'updated_at' => now(),
         ];
         DB::table('users')->insert($param);
         }
