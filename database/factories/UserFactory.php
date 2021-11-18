@@ -5,8 +5,11 @@
 use App\Model;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(App\User::class, function (Faker $faker) {
+
     return [
-        //
+        'name' => $faker->name(),
+        'address' => substr($faker->address(),7),
+        'tel' => $faker->phoneNumber(),
     ];
 });
