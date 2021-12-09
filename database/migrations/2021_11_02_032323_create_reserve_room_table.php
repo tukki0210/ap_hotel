@@ -17,7 +17,7 @@ class CreateReserveRoomTable extends Migration
             $table->increments('reserve_room_id');
             $table->integer('reserve_id');
             $table->integer('room_id');
-            $table->integer('days');
+            $table->date('days');
             $table->integer('price');
             $table->timestamps();
         });

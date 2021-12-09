@@ -15,12 +15,14 @@
             <td>{{$item->check_out_day}}</td>
             {{-- roomメソッドのbelongToManyでroomモデルとその中間テーブルreserve_roomテーブルにアクセス --}}
             {{-- 中間テーブルデータはpivot属性に入っている --}}
-            <td>{{$item->room->first()->pivot->price}}円</td>
-            <td>{{$item->room->first()->pivot->days}}日間</td>
+            @foreach($item->room as $room)
+            <td>{{$room->pivot}}円</td>
+            <td>{{$room->pivot->days}}</td>
             {{-- roomモデルからさらにbelongToでroomTypeモデルにアクセスしている --}}
-            <td>{{$item->room->first()->roomType->room_name}}</td>
-            <td>{{$item->room->first()->roomType->capacity}}人</td>
-            <td>{{$item->room->first()->room_number}}号室</td>
+            <td>{{$room->roomType->room_name}}</td>
+            <td>{{$room->roomType->capacity}}人</td>
+            <td>{{$room->room_number}}号室</td>
+            @endforeach
         </tr>
         @endforeach
     </table>

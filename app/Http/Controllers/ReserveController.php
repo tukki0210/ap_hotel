@@ -9,7 +9,7 @@ class ReserveController extends Controller
 {
     public function index()
     {
-        $items = Reserve::all();
+        $items = Reserve::with(['user','room'])->get();
 
         return view('reserve.index',['items' => $items]);
     }

@@ -13,10 +13,8 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testUser()
     {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
+        $this->assertTrue(true);
     }
 }

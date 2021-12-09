@@ -15,16 +15,32 @@ class ReserveDetailsTableSeeder extends Seeder
         $param = [
             'reserve_id' => 1,
             'room_id' => 1,
-            'days' => 3,
+            'days' => '2021-10-23',
             'price' => 8000
+        ];
+        DB::table('reserve_room')->insert($param);
+
+        $param = [
+            'reserve_id' => 1,
+            'room_id' => 1,
+            'days' => '2021-10-24',
+            'price' => 9000
         ];
         DB::table('reserve_room')->insert($param);
 
         $param = [
             'reserve_id' => 2,
             'room_id' => 2,
-            'days' => 2,
-            'price' => 7000
+            'days' => '2021-10-24',
+            'price' => 9000
+        ];
+        DB::table('reserve_room')->insert($param);
+
+        $param = [
+            'reserve_id' => 2,
+            'room_id' => 2,
+            'days' => '2021-10-25',
+            'price' => 9000
         ];
         DB::table('reserve_room')->insert($param);
     }
